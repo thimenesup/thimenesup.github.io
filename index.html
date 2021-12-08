@@ -23,8 +23,8 @@ h1{letter-spacing: 6px}
   <div class="padding-32">
     <div class="bar border" style="font-size:18px">
       <a href="#resume" class="bar-item button">Resume</a>
-      <a href="#portfolio" class="bar-item button">Portfolio</a>
       <a href="#contact" class="bar-item button">Contact</a>
+      <a href="#portfolio" class="bar-item button">Portfolio</a>
     </div>
   </div>
 </header>
@@ -33,24 +33,32 @@ h1{letter-spacing: 6px}
 <header id="resume" class="panel center" style="padding:16px 16px">
   <h2>Resume</h2>
   <h5>
-    Knowledge of the following programming languages: C++, C#, C, PHP, Lua, Java, Python, JavaScript and currently learning Zig.
-    Also other proprietary languages like GLSL, GDScript, GML and queries with SQL.
-    And markup languages like HTML and CSS and other serialization like JSON, XML and YAML.
+    Fluent (reading, writing, listening and speaking) in 3 languages: Spanish, Catalan and English.
+    Knowledge of the following general purpose programming languages: C++, C#, C, Rust, Zig, LUA, GDScript, GML, Java, PHP, Python, JavaScript.
+    Knowledge of shading languages like GLSL and HSLS.
+    Knowledge of markup languages like HTML and CSS.
+    Knowledge of serialization formats like JSON, XML and YAML.
     Knowledge of game engines like Godot, Unity and Unreal.
     Knowledge of networking sockets UDP and TCP and related concepts like the HTTP protocol, NAT Traversal/Punch, data serialization and replication etc.
     Knowledge of authoritative server game netcode with client side prediction, matchmaking server that can spawn virtual game server instances on demand.
-    handling user accounts (With their passwords stored securely by using battletested hashing algorithms like blowfish) and SQL and NoSQL databases.
-    Knowledge of OpenGL and rendering pipeline concepts like the gbuffer including depth, normals, diffuse, ambient occlusion etc.
-    Mesh concepts like vertices, vertex indices, vertex colors, UVs, vertex weights etc.
-    Math related concepts like vectors, matrix/transforms, rotations/quaternions.
-    Knowledge of the version control system Git.
-    Fluent in 3 languages: Spanish, Catalan and English.
+    Knowledge of data handling like user accounts (With their passwords stored securely by using battletested hashing algorithms like blowfish) and SQL and NoSQL databases.
+    Knowledge of OpenGL and other GPU rendering drivers like DirectX and Vulkan.
+    Knowledge of rendering pipeline concepts like deferred rendering with a gbuffer including depth, normals, diffuse, ambient occlusion etc.
+    Knowledge of mesh concepts like vertices, vertex indices, vertex colors, UVs, vertex weights etc.
+    Knowledge of math related concepts like vectors, matrix/transforms, rotations/quaternions.
+    Knowledge of the source code version control systems like Git.
+    And many more, as you may see in some of the projects in the portfolio.
   </h5>
+</header>
+
+<header id="contact" class="panel center" style="padding:16px 16px">
+  <h2>Contact</h2>
+  <h5>My contact email is thimenesup@gmail.com</h5>
 </header>
 
 <header id="portfolio" class="panel center" style="padding:16px 16px">
   <h2>Portfolio</h2>
-  <h5>These are some of my projects.</h5>
+  <h5>These are some of my projects. Only some of them have its source public, you may contact me for the source code of the private projects.</h5>
 
   <div class="padding-16"> </div>
   <h3>Battle Arena</h3>
@@ -64,8 +72,35 @@ h1{letter-spacing: 6px}
   </h5>
 
   <div class="padding-16"> </div>
+  <h3>Sparse Voxel Octree</h3>
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/rHN-RuvM2nk" style="padding:16px 16px; width:100%"> </iframe>
+  <h5>
+    A sparse voxel octree, using ray tracing for rendering with adjustable depth level of detail.
+    Really useful to represent and modify at runtime volumetric data of big sizes, unlike regular array based voxel approaches.
+    The project also includes a mesh voxelizer, to convert regular triangle meshes to voxel data.
+    The voxels contain primarily color and normal data, and can be easily expanded to contain other desired vertex attributes from said mesh like UVs,
+    that are already used to sample the provided mesh texture to determine the voxel color.
+    Its implemented in two versions, one being a classical approach of having nodes being heap allocated and them containing raw pointers to children,
+    the other one being stored as a packed array of nodes, with nodes having a bitwise mask for childs which are stored contiguously in a breadth first manner, to considerably minimize memory usage.
+    The format for loading and saving is extremely compact due to it using the same approach, which also supports streaming/loading at different level of detail.
+  </h5>
+
+  <div class="padding-16"> </div>
+  <h3>Turn Based Grid Battler</h3>
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/ZvQClsGWqkQ" style="padding:16px 16px; width:100%"> </iframe>
+  <h5>
+    Turn based grid battler, with authoritative networked multiplayer and local play.
+    The combat is based on CRPGs, where the turn flow is determined by each unit initiative and layed out visually,
+    units can then perform actions spending action points to use abilities or move around the grid before ending their turn.
+    Grid movement pathfinding is done with A* and it supports any arbitrary radius for units and obstacles, unlike other games which are limited to a uniform size of one.
+    It also has been made to allow players to manually input and trace their own desired movement path, in case the automatic one given by the pathfinding isn't desired,
+    and it is ensured to be a valid one by the server.
+  </h5>
+
+  <div class="padding-16"> </div>
   <h3>Neon Engine</h3>
   <iframe width="1280" height="720" src="https://www.youtube.com/embed/RYDiDqWGyxQ" style="padding:16px 16px; width:100%"> </iframe>
+  <img src="images/neon_engine_android.jpg" style="padding:16px 16px; width:100%" loading="lazy">
   <h5>
     My C/C++ toy engine where I made my custom Variant class that I used to write my own JSON serializer that only depends on the C++ standard library, which I tested by making my own glTF scene importer.
     Also implemented a property and method reflection system that allows easy serialization of objects.
@@ -74,7 +109,40 @@ h1{letter-spacing: 6px}
     I also wrote a CPU/software rasterizer/renderer that could be used as a fallback for platforms that dont have GPU accelerated graphics.
     It also has been ported to run on Android devices.
   </h5>
-  <img src="images/neon_engine_android.jpg" style="padding:16px 16px; width:100%">
+
+  <div class="padding-16"> </div>
+  <h3>ECS Data Oriented Test</h3>
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/gqvE1rAIGOk" style="padding:16px 16px; width:100%"> </iframe>
+  <h5>
+    This project is based on Unity's AngryBots ECS, implemented in C++ and with multithreading using OpenMP. Featuring a storagement class where structures
+    are layed out in a packed array instead of the traditional heap allocated objects traversed in a tree fashion, for maximum cache coherency and minimal memory re/allocations. 
+    This results in extremely fast object creation, deletion, and processing. Allowing you to have hundreds of thousands of bullets at runtime.
+  </h5>
+  <div class="bar border"> <a href="https://github.com/thimenesup/GodotDataOrientedTest" class="bar-item button">Source available on Github</a> </div>
+
+  <div class="padding-16"> </div>
+  <h3>Interactive Desktop Window</h3>
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/qtgeXOO9x7E" style="padding:16px 16px; width:100%"> </iframe>
+  <h5>
+    Project that uses the Win32 API to implement a desktop window that sits behind the icons, it can handle toggleable mouse and keyboard input to provide interactive user experiences.
+    It uses system notification trays to close the window, and can set itself to boot automatically on start by using the Windows registry keys.
+  </h5>
+
+  <div class="padding-16"> </div>
+  <h3>Model Painter</h3>
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/fq04pKIdcoY" style="padding:16px 16px; width:100%"> </iframe>
+  <h5>
+    Simple GPU based mesh texture painter, it uses a deferred-render-like approach where it rasterizes the UV coordinates of the triangle mesh to a framebuffer,
+    which are then sampled under the cursor to determine the texture coordinates we want to modify.
+  </h5>
+
+  <div class="padding-16"> </div>
+  <h3>Fez Clone</h3>
+  <iframe width="1280" height="720" src="https://www.youtube.com/embed/on3B1BScRYk" style="padding:16px 16px; width:100%"> </iframe>
+  <h5>
+    This project features a recreation of the main mechanic of the indie game "Fez".
+    The kinematic character collision movement was also reimplemented to add support for single sided 3D colliders like classic 2D platformers have.
+  </h5>
 
   <div class="padding-16"> </div>
   <h3>Battle Network</h3>
@@ -106,32 +174,17 @@ h1{letter-spacing: 6px}
     Really useful for designing maps and even UI elements. I made it work with minimal engine source code changes to preserve compatibility and prevent things breaking
     while also at the same time preserving the same workflow you use to edit scenes regularly.
   </h5>
-  <div class="bar border"> <a href="https://github.com/thimenesup/GodotNetworkedSceneEditor" class="bar-item button">Get it on Github</a> </div>
-
-  <div class="padding-16"> </div>
-  <h3>Paperplane Royale</h3>
-  <img src="images/paperplane.jpg" style="padding:16px 16px; width:100%">
-  <h5>A multiplayer online battle royale game about planes made of paper, where you will grab random items to ensure that you are the last survivor. Authoritative server.</h5>
-
-  <div class="padding-16"> </div>
-  <h3>Sortoutmatic</h3>
-  <video width="1280" height="720" controls style="padding:16px 16px; width:100%"> <source src="https://external-preview.redd.it/9fo-NYU31yn8lHTQojwP9xBypzChG1BG1KmTmlIDNzg.gif?width=720&format=mp4&s=89415561a8c86eb265ba95be0b2dd901c2895d86" type="video/ogg"> </video>
-  <h5>A small game project done in a day about sorting objects by tags for Android.</h5>
-
-  <div class="padding-16"> </div>
-  <h3>FPS</h3>
-  <iframe width="1280" height="720" src="https://www.youtube.com/embed/KWot20XDdM4" style="padding:16px 16px; width:100%"> </iframe>
-  <h5>First person character controller, implemented for a shooter with bullet accuracy spread, reloading and weapon switching. Everything is networked, authoritative server.</h5>
+  <div class="bar border"> <a href="https://github.com/thimenesup/GodotNetworkedSceneEditor" class="bar-item button">Source available on Github</a> </div>
 
   <div class="padding-16"> </div>
   <h3>Godot NFC</h3>
   <h5>Godot plugin for Android written in Java where you can scan NFC tags and read its payload data.</h5>
-  <div class="bar border"> <a href="https://github.com/thimenesup/GodotNFC" class="bar-item button">Get it on Github</a> </div>
+  <div class="bar border"> <a href="https://github.com/thimenesup/GodotNFC" class="bar-item button">Source available on Github</a> </div>
 
   <div class="padding-16"> </div>
   <h3>Godot Camera</h3>
   <h5>Godot plugin for Android written in Java where you can use the device hardware camera and process the image frame data.</h5>
-  <div class="bar border"> <a href="https://github.com/thimenesup/GodotCamera" class="bar-item button">Get it on Github</a> </div>
+  <div class="bar border"> <a href="https://github.com/thimenesup/GodotCamera" class="bar-item button">Source available on Github</a> </div>
 
   <div class="padding-16"> </div>
   <h3>Godot Headless Export Util</h3>
@@ -139,12 +192,18 @@ h1{letter-spacing: 6px}
     Godot util where you can export a game data pack with stripped resources like meshes, textures, sounds, etc... 
     Ideal for games that rely on a dedicated server hosted on the cloud.
   </h5>
-  <div class="bar border"> <a href="https://github.com/thimenesup/GodotHeadlessExportPCK" class="bar-item button">Get it on Github</a> </div>
-</header>
+  <div class="bar border"> <a href="https://github.com/thimenesup/GodotHeadlessExportPCK" class="bar-item button">Source available on Github</a> </div>
 
-<header id="contact" class="panel center" style="padding:16px 16px">
-  <h2>Contact</h2>
-  <h5>My contact email is thimenesup@gmail.com</h5>
+  <div class="padding-16"> </div>
+  <h3>Paperplane Royale</h3>
+  <img src="images/paperplane.jpg" style="padding:16px 16px; width:100%" loading="lazy">
+  <h5>A multiplayer online battle royale game about planes made of paper, where you will grab random items to ensure that you are the last survivor. Authoritative server.</h5>
+
+  <div class="padding-16"> </div>
+  <h3>Sortoutmatic</h3>
+  <video width="1280" height="720" controls style="padding:16px 16px; width:100%"> <source src="https://external-preview.redd.it/9fo-NYU31yn8lHTQojwP9xBypzChG1BG1KmTmlIDNzg.gif?width=720&format=mp4&s=89415561a8c86eb265ba95be0b2dd901c2895d86" type="video/ogg"> </video>
+  <h5>A small game project done in a day about sorting objects by tags for Android.</h5>
+
 </header>
   
 <!-- End Page Content -->
