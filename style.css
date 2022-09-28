@@ -1,25 +1,98 @@
-body{color:#eaeaea;background-color:#363636;}
+html {
+	max-width: 86ch;
+	padding: 3em 1em;
+	margin: auto;
+	line-height: 1.75;
+	font-size: 1.25em;
+	scroll-behavior: smooth;
+}
 
-html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
-h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
-h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}
-img{vertical-align:middle;width:100%;height:auto;object-fit:cover;}
-iframe{border:none;aspect-ratio:16/9;}
+body {
+	color: #DCD7BA;
+	background-color: #16161D;
+	font-family: Consolas;
+}
 
-.content{margin-left:auto;margin-right:auto}
+h1 {
+	color: #FFA066;
+	font-size: 2em;
+	text-align: center;
+	white-space: pre-line;
+}
 
-.button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
-.button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
-.button:hover{color:#000!important;background-color:#ccc!important}
+h2 {
+	color: #7E9CD8;
+	margin-bottom: 0;
+}
 
-.bar{width:100%;overflow:hidden}
-.center .bar{display:inline-block;width:auto}
-.bar .bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
+h3 {
+	color: #957FB8;
+	margin-bottom: 0;
+}
 
-.center{text-align:center!important}
-.border{border:1px solid #ccc!important}
+hr {
+	height: 2px;
+	border-width: 0;
+	background-color: #7E9CD8;
+	margin-top: 0;
+}
 
-.container,.panel{padding:0.01em 16px}.panel{margin-top:16px;margin-bottom:16px}
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+	white-space: pre-line;
+}
 
-.padding-16{padding-top:16px!important;padding-bottom:16px!important}
-.padding-32{padding-top:32px!important;padding-bottom:32px!important}
+iframe {
+	border: none;
+	aspect-ratio: 16/9;
+	margin-top: 1em;
+}
+
+.button-bar {
+	color: #727169;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.nav-button {
+	color: #E6C384;
+	text-decoration: none;
+}
+
+.nav-button:hover {
+	color: #16161D;
+	background-color: #E6C384;
+}
+
+.button {
+	color: #98BB6C;
+	text-align: center;
+	text-decoration: none;
+}
+
+.button:hover {
+	color: #16161D;
+	background-color: #98BB6C;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #E46876;
+ }
+
+::-webkit-scrollbar-thumb:hover {
+	background: #FF5D62;
+}
+
+::selection {
+	/* color: #76946A; */
+	background: #2D4F67;
+}
