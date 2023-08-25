@@ -14,26 +14,26 @@ body {
 }
 
 h1 {
-	color: #FFA066;
+	color: #E6C384;
 	font-size: 2em;
 	text-align: center;
 	white-space: pre-line;
 }
 
 h2 {
-	color: #7E9CD8;
+	color: #E6C384;
 	margin-bottom: 0;
 }
 
 h3 {
-	color: #957FB8;
+	color: #C0A36E;
 	margin-bottom: 0;
 }
 
 hr {
 	height: 2px;
 	border-width: 0;
-	background-color: #7E9CD8;
+	background-color: #E6C384;
 	margin-top: 0;
 }
 
@@ -55,29 +55,24 @@ iframe {
 	font-size: 1.5em;
 }
 
-.nav-button {
-	color: #E6C384;
-	text-decoration: none;
-}
-
-.nav-button:hover {
-	color: #16161D;
-	background-color: #E6C384;
-}
-
 .button {
-	color: #98BB6C;
+	color: #DCA561;
 	text-align: center;
 	text-decoration: none;
 }
 
 .button:hover {
 	color: #16161D;
-	background-color: #98BB6C;
+	background-color: #DCA561;
+}
+
+.button:active {
+	color: #16161D;
+	background-color: #FFA066;
 }
 
 ::-webkit-scrollbar {
-	width: 8px;
+	width: 0.75em;
 }
 
 ::-webkit-scrollbar-track {
@@ -85,11 +80,15 @@ iframe {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #E46876;
+	background: #E6C384;
  }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #FF5D62;
+	background: #DCA561;
+}
+
+::-webkit-scrollbar-thumb:active {
+	background: #FFA066;
 }
 
 ::selection {
