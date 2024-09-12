@@ -6,96 +6,66 @@
 <link rel="stylesheet" href="style.css">
 
 <body>
-	<h1>'thimenesup'
-	Software Programmer
-	</h1>
 
-	<div class="button-bar">
-		[
-		<a href="#resume" class="button">Resume</a>
-		|
-		<a href="#projects" class="button">Projects</a>
-		|
-		<a href="#contact" class="button">Contact</a>
-		]
-	</div>
-
-	<h2 id="resume">Resume</h2>
-	<hr>
-
-	<p>Knowledge of:
-	Spoken languages like English Spanish and Catalan, all fluent in written form and spoken. 
-	Programming languages like C++, C#, C, Zig, Rust, Lua, GDScript, GML, Java, PHP, Python, JavaScript.
-	Assembly machine code architectures like x86, arm, Z80 and RISC/MIPS.
-	Intermediate code of virtual machines like LLVM_IR CLR and JVM.
-	Familiarity with Linux, Unix and POSIX systems and tools.
-	Build systems like MSBuild CMake Scons Make and Ninja.
-	Usage of compilers like MSVC GCC and Clang/LLVM.
-	Source code version control system Git.
-	Game engines like Unity, Unreal and Godot.
-	Shading languages like GLSL and HLSL.
-	OpenGL and other GPU rendering drivers like DirectX and Vulkan.
-	GPU debugging and profiling tools like RenderDoc, PIX, Radeon GPU Profiler and Nvidia Nsight.
-	Markup languages like HTML and CSS.
-	Serialization formats like JSON, XML, YAML and custom binary formats.
-	Networking sockets UDP and TCP and related concepts like the HTTP protocol, NAT Traversal/Punch, data serialization and replication etc.
-	Authoritative server game netcode with client-side prediction, matchmaking server that can spawn virtual game server instances on demand.
-	Data handling like user accounts (With their passwords stored securely by using battletested hashing algorithms like blowfish) and SQL and NoSQL databases.
-	Rendering pipeline concepts like deferred rendering with a gbuffer including depth, normals, diffuse, ambient occlusion etc.
-	Mesh concepts like vertices, vertex indices, vertex colors, UVs, vertex weights etc and skinning with animation by keyframe interpolation.
-	Math related concepts like vectors, matrix/transforms, rotations/quaternions.
-	</p>
-
-	<h2 id="projects">Projects</h2>
+	<h2 id="projects">Portfolio</h2>
 	<hr>
 	<p>These are some of my projects. Only some of them have its source public, you may contact me for the source code of the private projects.</p>
 
+	<div class="plate">
 	<h3>Sparse Voxel Octree Engine</h3>
 	<iframe width="100%" loading="lazy" src="https://www.youtube.com/embed/_pPClFH5MgA?rel=0"></iframe>
 	<details>
 		<summary>Description</summary>
-		<p>Showcase of a sparse voxel octree engine.
+		<p id="pdesc">Showcase of a sparse voxel octree engine.
 		Able to represent and modify at runtime volumetric data of big sizes, unlike regular array based voxel approaches.
 		Running on a specialized renderer for performance since traditional approaches aren't cut for it, while also being compatible with relatively older GPUs (Vulkan and up).
 		Also implementing collision resolution for the physics engine, for both voxels and traditional engine physics shapes.
-		Its memory and serialization formats have been optimized to be as compact as possible while preserving performance.</p>
+		Its memory and serialization formats have been optimized to be as compact as possible while preserving performance.
 		With a procedural terrain generation which also handles partition, streaming and LoDs.
 		The project also implements a mesh voxelizer, to convert regular triangle meshes to voxel data.
-		The voxels contain primarily color and normal data, and can be easily expanded to contain other desired vertex attributes from said mesh like UVs, that are already used to sample the provided mesh texture to determine the voxel color.
+		The voxels contain primarily color and normal data, and can be easily expanded to contain other desired vertex attributes from said mesh like UVs, that are already used to sample the provided mesh texture to determine the voxel color.</p>
 	</details>
+	</div>
 
+	<div class="plate">
 	<h3>Interactive Desktop Window</h3>
 	<iframe width="100%" loading="lazy" src="https://www.youtube.com/embed/qtgeXOO9x7E?rel=0"></iframe>
 	<details>
 		<summary>Description</summary>
-		<p>Project that uses the Win32 API to implement a desktop window that sits behind the icons, it can handle toggleable mouse and keyboard input to provide interactive user experiences.
+		<p id="pdesc">Project that uses the Win32 API to implement a desktop window that sits behind the icons, it can handle toggleable mouse and keyboard input to provide interactive user experiences.
 		It uses system notification trays to close the window, and can set itself to boot automatically on start by using the Windows registry keys.</p>
 	</details>
+	</div>
 
+	<div class="plate">
 	<h3>Battle Arena</h3>
 	<iframe width="100%" loading="lazy" src="https://www.youtube.com/embed/6VuqoYETFHY?rel=0"></iframe>
 	<details>
 		<summary>Description</summary>
-		<p>Multiplayer online battle arena combat where you build the way your character fights by selecting from a variety of abilities to defeat your foes. 
+		<p id="pdesc">Multiplayer online battle arena combat where you build the way your character fights by selecting from a variety of abilities to defeat your foes. 
 		With a matchmaking server that allows people to find its desired match depending of region, game mode or MMR and even with the option to party with friends. 
 		The server is able to spin up dedicated server game instances using cloud services or make players host the game with the help of NAT Traversal/Punch so clients dont need to do port forwarding. 
 		It also uses Steam integration, which is optional and the service may work without it, you can also replace it with a custom authentication solution etc.
 		The netcode of the game works as an authoritative server.</p>
 	</details>
+	</div>
 
+	<div class="plate">
 	<h3>Bounding Volume Hierarchy</h3>
 	<iframe width="100%" loading="lazy" src="https://www.youtube.com/embed/fVFigrUK1cg?rel=0"></iframe>
 	<details>
 		<summary>Description</summary>
-		<p>An extremely compact implementation of a BVH for triangle meshes where nodes are stored in a contiguous buffer, making it a perfect fit for the GPU to accelerate raytracing, it also allows easy file saving/loading.
+		<p id="pdesc">An extremely compact implementation of a BVH for triangle meshes where nodes are stored in a contiguous buffer, making it a perfect fit for the GPU to accelerate raytracing, it also allows easy file saving/loading.
 		It also supports skinned skeletal meshes, where the bounding volumes will get adjusted without rebuilding the entire tree.</p>
 	</details>
+	</div>
 
+	<div class="plate">
 	<h3>ECS Data Oriented Test</h3>
 	<iframe width="100%" loading="lazy" src="https://www.youtube.com/embed/I904IqwbCXk?rel=0"></iframe>
 	<details>
 		<summary>Description</summary>
-		<p>This project is based on Unity's AngryBots ECS, implemented in C++ and with multithreading using OpenMP. Featuring a storagement class where structures are layed out in a packed array instead of the traditional heap allocated objects traversed in a tree fashion, for maximum cache coherency and minimal memory re/allocations. 
+		<p id="pdesc">This project is based on Unity's AngryBots ECS, implemented in C++ and with multithreading using OpenMP. Featuring a storagement class where structures are layed out in a packed array instead of the traditional heap allocated objects traversed in a tree fashion, for maximum cache coherency and minimal memory re/allocations. 
 		This results in extremely fast object creation, deletion, and processing. Allowing you to have hundreds of thousands of bullets at runtime.</p>
 	</details>
 	<div class="button-bar">
@@ -103,78 +73,96 @@
 		<a href="https://github.com/thimenesup/GodotDataOrientedTest" class="button">View on Github</a>
 		]
 	</div>
+	</div>
 
+	<div class="plate">
 	<h3>Model Painter</h3>
 	<iframe width="100%" loading="lazy" src="https://www.youtube.com/embed/fq04pKIdcoY?rel=0"></iframe>
 	<details>
 		<summary>Description</summary>
-		<p>Simple GPU based mesh texture painter, it uses a deferred-render-like approach where it rasterizes the UV coordinates of the triangle mesh to a framebuffer, which are then sampled under the cursor to determine the texture coordinates we want to modify.</p>
+		<p id="pdesc">Simple GPU based mesh texture painter, it uses a deferred-render-like approach where it rasterizes the UV coordinates of the triangle mesh to a framebuffer, which are then sampled under the cursor to determine the texture coordinates we want to modify.</p>
 	</details>
+	</div>
 
+	<div class="plate">
 	<h3>Zig bindings for Godot</h3>
-	<p>I made the Godot GDNative bindings for the Zig programming language.</p>
+	<p id="pdesc">I made the Godot GDNative bindings for the Zig programming language.</p>
 	<div class="button-bar">
 		[
 		<a href="https://github.com/thimenesup/GodotZigBindings" class="button">View on Github</a>
 		]
 	</div>
+	</div>
 
+	<div class="plate">
 	<h3>Neon Engine</h3>
 	<iframe width="100%" loading="lazy" src="https://www.youtube.com/embed/RYDiDqWGyxQ?rel=0"></iframe>
 	<details>
 		<summary>Description</summary>
-		<p>My C/C++ toy engine where I made my custom Variant class that I used to write my own JSON serializer that only depends on the C++ standard library, which I tested by making my own glTF scene importer.
+		<p id="pdesc">My C/C++ toy engine where I made my custom Variant class that I used to write my own JSON serializer that only depends on the C++ standard library, which I tested by making my own glTF scene importer.
 		Also implemented a property and method reflection system that allows easy serialization of objects.
 		I also implemented my own GUI solution with control rectangles that are interactable with inputs like buttons, sprites/meshes and text which is editable.
 		The OpenGL ES 3.0 renderer handles frustum culling and mesh/material/drawcall batching, with skinned meshes and animations, has ambient and directional lighting with shadows.
 		I also wrote a CPU/software rasterizer/renderer that could be used as a fallback for platforms that dont have GPU accelerated graphics.
 		It also has been ported to run on Android devices.</p>
 	</details>
+	</div>
 
+	<div class="plate">
 	<h3>Shader Showcase</h3>
 	<iframe width="100%" loading="lazy" src="https://www.youtube.com/embed/3aqELmZ9_as?rel=0"></iframe>
 	<details>
 		<summary>Description</summary>
-		<p>Showcase of various types of shaders, fancy specific effects like fur, post processing screen space effects such as blur, screen space decals by using the depth buffer, mesh effects like clipping and fragment disolvement, special shading as cross stitching or celshading, signed distance fields processing and ray marching, meshes and other primitives scene ray tracing and more.</p>
+		<p id="pdesc">Showcase of various types of shaders, fancy specific effects like fur, post processing screen space effects such as blur, screen space decals by using the depth buffer, mesh effects like clipping and fragment disolvement, special shading as cross stitching or celshading, signed distance fields processing and ray marching, meshes and other primitives scene ray tracing and more.</p>
 	</details>
+	</div>
 
+	<div class="plate">
 	<h3>Turn Based Grid Battler</h3>
 	<iframe width="100%" loading="lazy" src="https://www.youtube.com/embed/ZvQClsGWqkQ?rel=0"></iframe>
 	<details>
 		<summary>Description</summary>
-		<p>Turn based grid battler, with authoritative networked multiplayer and local play.
+		<p id="pdesc">Turn based grid battler, with authoritative networked multiplayer and local play.
 		The combat is based on CRPGs, where the turn flow is determined by each unit initiative and layed out visually, units can then perform actions spending action points to use abilities or move around the grid before ending their turn.
 		Grid movement pathfinding is done with A* and it supports any arbitrary radius for units and obstacles, unlike other games which are limited to a uniform size of one.
 		It also has been made to allow players to manually input and trace their own desired movement path, in case the automatic one given by the pathfinding isn't desired, and it is ensured to be a valid one by the server.</p>
 	</details>
+	</div>
 
+	<div class="plate">
 	<h3>Puzzle Cube</h3>
 	<iframe width="100%" loading="lazy" src="https://www.youtube.com/embed/qXaihi1IgBo?rel=0"></iframe>
 	<details>
 		<summary>Description</summary>
-		<p>Works just like the classic toy, where you drag segments to make each side of the cube of the same color by rotating them, but it also supports any arbitrary cubic size!</p>
+		<p id="pdesc">Works just like the classic toy, where you drag segments to make each side of the cube of the same color by rotating them, but it also supports any arbitrary cubic size!</p>
 	</details>
+	</div>
 
+	<div class="plate">
 	<h3>Procedural Jigsaw</h3>
 	<iframe width="100%" loading="lazy" src="https://www.youtube.com/embed/xp3jNaGEkwA?rel=0"></iframe>
 	<details>
 		<summary>Description</summary>
-		<p>As the name says, this project randomly generate jigsaws given an image and size, which then can be assembled, including in online multiplayer, no more missing pieces, yay!</p>
+		<p id="pdesc">As the name says, this project randomly generate jigsaws given an image and size, which then can be assembled, including in online multiplayer, no more missing pieces, yay!</p>
 	</details>
+	</div>
 
+	<div class="plate">
 	<h3>Fez Clone</h3>
 	<iframe width="100%" loading="lazy" src="https://www.youtube.com/embed/on3B1BScRYk?rel=0"></iframe>
 	<details>
 		<summary>Description</summary>
-		<p>This project features a recreation of the main mechanic of the indie game "Fez".
+		<p id="pdesc">This project features a recreation of the main mechanic of the indie game "Fez".
 		The kinematic character collision movement was also reimplemented to add support for single sided 3D colliders like classic 2D platformers have.</p>
 	</details>
+	</div>
 
+	<div class="plate">
 	<h3>Godot Networked Editor Plugin</h3>
 	<iframe width="100%" loading="lazy" src="https://www.youtube.com/embed/sIVMP1THjSE?rel=0"> </iframe>
 	<details>
 		<summary>Description</summary>
-		<p>Godot plugin that allows people to remotely connect over the network and edit scenes at the same time, increasing productivity a lot when working in a group.
+		<p id="pdesc">Godot plugin that allows people to remotely connect over the network and edit scenes at the same time, increasing productivity a lot when working in a group.
 		Really useful for designing maps and even UI elements. I made it work with minimal engine source code changes to preserve compatibility and prevent things breaking
 		while also at the same time preserving the same workflow you use to edit scenes regularly.
 		</p>
@@ -184,27 +172,27 @@
 		<a href="https://github.com/thimenesup/GodotNetworkedSceneEditor" class="button">View on Github</a>
 		]
 	</div>
+	</div>
 
+	<div class="plate">
 	<h3>Godot NFC</h3>
-	<p>Godot plugin for Android written in Java where you can scan NFC tags and read its payload data.</p>
+	<p id="pdesc">Godot plugin for Android written in Java where you can scan NFC tags and read its payload data.</p>
 	<div class="button-bar">
 		[
 		<a href="https://github.com/thimenesup/GodotNFC" class="button">View on Github</a>
 		]
 	</div>
+	</div>
 
+	<div class="plate">
 	<h3>Godot Camera</h3>
-	<p>Godot plugin for Android written in Java where you can use the device hardware camera and process the image frame data.</p>
+	<p id="pdesc">Godot plugin for Android written in Java where you can use the device hardware camera and process the image frame data.</p>
 	<div class="button-bar">
 		[
 		<a href="https://github.com/thimenesup/GodotCamera" class="button">View on Github</a>
 		]
 	</div>
-
-	<h2 id="contact">Contact</h2>
-	<hr>
-
-	<p>My contact email is thimenesup@gmail.com</p>
+	</div>
 
 </body>
 

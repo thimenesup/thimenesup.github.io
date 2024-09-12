@@ -2,57 +2,86 @@ html {
 	max-width: 86ch;
 	padding: 3em 1em;
 	margin: auto;
-	line-height: 1.75;
 	font-size: 1.25em;
 	scroll-behavior: smooth;
 }
 
 body {
-	color: #DCD7BA;
-	background-color: #16161D;
+	color: #FDFDFB;
+	background-color: #131313;
 	font-family: Consolas;
 }
 
 h1 {
-	color: #E6C384;
+	color: #F78F43;
 	font-size: 2em;
 	text-align: center;
 	white-space: pre-line;
 }
 
 h2 {
-	color: #E6C384;
+	color: #F78F43;
 	margin-bottom: 0;
 }
 
 h3 {
-	color: #C0A36E;
 	margin-bottom: 0;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	color: #F78F43;
+	text-align: center;
 }
 
 hr {
 	height: 2px;
 	border-width: 0;
-	background-color: #E6C384;
+	background-color: #F78F43;
 	margin-top: 0;
 }
 
 p {
+	line-height: 1.5em;
 	margin-top: 0;
 	margin-bottom: 0;
 	white-space: pre-line;
 }
 
+#pdesc {
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
 iframe {
 	border: none;
 	aspect-ratio: 16/9;
-	margin-top: 1em;
+}
+
+details > summary {
+	list-style-type: "[+]";
+}
+
+details[open] > summary {
+	list-style-type: "[-]";
+}
+
+summary {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	text-align: center;
+	cursor: pointer;
+	color: #F78F43;
+}
+
+.plate {
+	border-radius: 0.5em;
+	background-color: #1C1C1C;
 }
 
 .button-bar {
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
 	color: #727169;
 	text-align: center;
-	font-size: 1.5em;
 }
 
 .button {
@@ -69,26 +98,6 @@ iframe {
 .button:active {
 	color: #16161D;
 	background-color: #FFA066;
-}
-
-::-webkit-scrollbar {
-	width: 0.75em;
-}
-
-::-webkit-scrollbar-track {
-	background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-	background: #E6C384;
- }
-
-::-webkit-scrollbar-thumb:hover {
-	background: #DCA561;
-}
-
-::-webkit-scrollbar-thumb:active {
-	background: #FFA066;
 }
 
 ::selection {
